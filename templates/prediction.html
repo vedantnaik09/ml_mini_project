@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prediction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                padding-bottom: 50px;
+                padding-top: 10px;
+            }
+    
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+    
+            form {
+                max-width: 500px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 50px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #555;
+            }
+    
+            input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+    
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    
+            h2 {
+                margin-top: 20px;
+                text-align: center;
+                color: #333;
+            }
+    
+            a {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                color: #007bff;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                text-decoration: underline;
+            }
+            div{
+                margin: auto;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Model Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="pelvic_incidence">Pelvic Incidence:</label>
+        <input type="text" id="pelvic_incidence" name="pelvic_incidence"><br><br>
+        
+        <label for="pelvic_tilt">Pelvic Tilt:</label>
+        <input type="text" id="pelvic_tilt" name="pelvic_tilt"><br><br>
+        
+        <label for="lumbar_lordosis_angle">Lumbar Lordosis Angle:</label>
+        <input type="text" id="lumbar_lordosis_angle" name="lumbar_lordosis_angle"><br><br>
+        
+        <label for="sacral_slope">Sacral Slope:</label>
+        <input type="text" id="sacral_slope" name="sacral_slope"><br><br>
+        
+        <label for="pelvic_radius">Pelvic Radius:</label>
+        <input type="text" id="pelvic_radius" name="pelvic_radius"><br><br>
+        
+        <label for="degree_spondylolisthesis">Degree Spondylolisthesis:</label>
+        <input type="text" id="degree_spondylolisthesis" name="degree_spondylolisthesis"><br><br>
+        
+        <label for="pelvic_slope">Pelvic Slope:</label>
+        <input type="text" id="pelvic_slope" name="pelvic_slope"><br><br>
+        
+        <label for="direct_tilt">Direct Tilt:</label>
+        <input type="text" id="direct_tilt" name="direct_tilt"><br><br>
+        
+        <label for="thoracic_slope">Thoracic Slope:</label>
+        <input type="text" id="thoracic_slope" name="thoracic_slope"><br><br>
+        
+        <label for="cervical_tilt">Cervical Tilt:</label>
+        <input type="text" id="cervical_tilt" name="cervical_tilt"><br><br>
+        
+        <label for="sacrum_angle">Sacrum Angle:</label>
+        <input type="text" id="sacrum_angle" name="sacrum_angle"><br><br>
+        
+        <label for="scoliosis_slope">Scoliosis Slope:</label>
+        <input type="text" id="scoliosis_slope" name="scoliosis_slope"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+
+    <a href="/">Go back to home page</a>
+</body>
+</html>
