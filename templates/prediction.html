@@ -12,11 +12,13 @@
                 padding: 0;
                 padding-bottom: 50px;
                 padding-top: 10px;
+                background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzNiYXRjaDE1LWJnLTExLmpwZw.jpg");
+                background-size: cover;
             }
     
             h1 {
                 text-align: center;
-                color: #333;
+                color: white;
             }
     
             form {
@@ -32,7 +34,7 @@
                 display: block;
                 margin-bottom: 8px;
                 font-weight: bold;
-                color: #555;
+                color:white;
             }
     
             input[type="text"] {
@@ -60,7 +62,7 @@
             h2 {
                 margin-top: 20px;
                 text-align: center;
-                color: #333;
+                color: white;
             }
     
             a {
@@ -77,11 +79,20 @@
             div{
                 margin: auto;
             }
+            .glass{
+                background: rgba(0, 0, 0, 0.66);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+
+            }
         </style>
     </head>
 <body>
     <h1>Model Prediction</h1>
-    <form action="/predict" method="post">
+    <form action="/predict" method="post" class="glass">
         <label for="pelvic_incidence">Pelvic Incidence:</label>
         <input type="text" id="pelvic_incidence" name="pelvic_incidence"><br><br>
         
